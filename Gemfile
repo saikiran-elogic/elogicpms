@@ -5,7 +5,6 @@ gem 'actionpack', '3.2.13' # added b/c google_charts gem isn't being a good citi
 
 group :production do
   gem 'pg' 
-  gem 'passenger'
   
 end
 
