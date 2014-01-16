@@ -59,16 +59,29 @@ Timetracker::Application.configure do
   config.active_support.deprecation = :notify
   
   # ActionMailer Config
+  # config.action_mailer.perform_deliveries = false
+  # config.action_mailer.default_url_options = { :host => 'sprintapp.com' }
+  # config.action_mailer.delivery_method = :smtp
+  # config.action_mailer.smtp_settings = {
+  #   :address => 'smtp.sendgrid.net',
+  #   :port => '587',
+  #   :authentication => :plain,
+  #   :user_name => ENV['SENDGRID_USERNAME'],
+  #   :password => ENV['SENDGRID_PASSWORD'],
+  #   :domain => 'sprintapp.com'
+  # }
+
+  # ActionMailer Config
   config.action_mailer.perform_deliveries = false
   config.action_mailer.default_url_options = { :host => 'sprintapp.com' }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    :address => 'smtp.sendgrid.net',
-    :port => '587',
-    :authentication => :plain,
-    :user_name => ENV['SENDGRID_USERNAME'],
-    :password => ENV['SENDGRID_PASSWORD'],
-    :domain => 'sprintapp.com'
-  }
+    :address              => "smtp.gmail.com",
+    :port                 => 587,
+    :domain               => 'elogicpms.herokuapp.com',
+    :user_name            => 'demotest.devise',
+    :password             => 'allinone',
+    :authentication       => 'plain',
+    :enable_starttls_auto => true  }
     
 end
