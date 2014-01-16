@@ -29,7 +29,7 @@ class Ability
       
       can [:edit, :update, :change_password, :process_password_change, :profile], AdminUser, :id => user.id
       
-      cannot :index, [AdminUser, Client, TicketCategory, TicketPriority, TicketStatus, Team]
+      cannot [:index,:manage], [AdminUser, Client, TicketCategory, TicketPriority, TicketStatus, Team]
       
       # can :manual_punch, TicketComment if account.allow_manual_punches?
       
