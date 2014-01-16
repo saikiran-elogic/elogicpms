@@ -3,7 +3,8 @@ class ApplicationController < ActionController::Base
   helper :all
   
   protect_from_forgery
-  
+   # Override build_footer method in ActiveAdmin::Views::Pages
+  require 'active_admin_views_pages_base.rb'
   def current_user
     current_admin_user
   end
